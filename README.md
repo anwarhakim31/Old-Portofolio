@@ -1,6 +1,9 @@
 # Website Al-Quran V1.
-<br>
  https://www.figma.com/file/sFpo8fSHGGP8Wzmfk0Ig8c/Portofolio-old?type=design&node-id=0%3A1&mode=design&t=qllz2i4DjMknrNgl-1
+
+
+<br>
+
 ![Capture](https://github.com/anwarhakim31/Web-Al-Quran/assets/155529856/222eac41-1634-4fdd-9fa8-1455515488b3)
 
 
