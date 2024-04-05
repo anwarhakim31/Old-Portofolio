@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio Anwar Hakim</title>
+    <link rel="shortcut icon" href="img/logo 1.png" type="image/x-icon" />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +49,7 @@
               <h3 class="fs-third-heading fw-medium">Welcome To My World</h3>
               <h1 class="fs-primary-heading fw-bold">Hi, I’m Hakim</h1>
               <h2 class="fs-secondary-heading fw-medium">
-                Front-end Developher
+                <span class="auto-type"></span>
               </h2>
               <div class="hero-logo d-flex">
                 <a href="https://www.instagram.com/anwarhakimm/"
@@ -73,15 +75,22 @@
           </div>
         </div>
       </section>
+
       <div class="wave"><img src="img/wave/wave1.svg" alt="" /></div>
+
       <section class="about" id="About">
         <div class="container">
-          <h3 class="about-head fw-bold fs-third-heading text-center">About</h3>
+          <h3
+            class="about-head fw-bold fs-third-heading text-center animate"
+            style="--i: 0"
+          >
+            About
+          </h3>
           <div class="even-columns">
-            <div class="about-image">
+            <div class="about-image animate" style="--i: 1">
               <img src="img/about.png" alt="" />
             </div>
-            <div class="about-content">
+            <div class="about-content animate" style="--i: 2">
               <p class="fw-medium fs-400 text-height" data-width="wide">
                 I am a seventh year student who is very interested about
                 Programming and Web Developer. I want to implement and develop
@@ -114,65 +123,148 @@
       <div class="wave2 wave">
         <img src="img/wave/wave2.svg" alt="" />
       </div>
-      <section class="skill" id="skill">
+
+      <section class="skill" id="Skill">
         <div class="container">
-          <h3 class="skill-head text-center fw-bold fs-third-heading">Skill</h3>
-        </div>
-        <div>
-          <div class="container">
-            <div class="skill-wrapper">
-              <div class="top">
-                <div class="box d-flex">
-                  <img src="img/language/html-icon.png" alt="html" />
-                  <div class="box-content">
-                    <h3>HTML</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </div>
-                <div class="box d-flex">
-                  <img src="img/language/html-icon.png" alt="html" />
-                  <div class="box-content">
-                    <h3>HTML</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </div>
-                <div class="box d-flex">
-                  <img src="img/language/javascript.png" alt="html" />
-                  <div class="box-content">
-                    <h3>javascript</h3>
-                    <p>Intermediate</p>
-                  </div>
+          <h3
+            class="skill-head text-center fw-bold fs-third-heading animate"
+            style="--i: 1"
+          >
+            Skill
+          </h3>
+          <div class="skill-wrapper">
+            <div class="top">
+              <div class="box d-flex animate1" style="--i: 0">
+                <img src="img/language/html-icon.png" alt="html" />
+                <div class="box-content">
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
                 </div>
               </div>
-              <div class="bottom">
-                <div class="box d-flex">
-                  <img src="img/language/html-icon.png" alt="html" />
-                  <div class="box-content">
-                    <h3>HTML</h3>
-                    <p>Intermediate</p>
-                  </div>
+              <div class="box d-flex animate1" style="--i: 1">
+                <img src="img/language/css-icon.png" alt="html" />
+                <div class="box-content">
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
                 </div>
-                <div class="box d-flex">
-                  <img src="img/language/html-icon.png" alt="html" />
-                  <div class="box-content">
-                    <h3>HTML</h3>
-                    <p>Intermediate</p>
-                  </div>
+              </div>
+              <div class="box d-flex animate1" style="--i: 2">
+                <img src="img/language/javascript.png" alt="html" />
+                <div class="box-content">
+                  <h3>javascript</h3>
+                  <p>Intermediate</p>
                 </div>
-                <div class="box d-flex">
-                  <img src="img/language/html-icon.png" alt="html" />
-                  <div class="box-content">
-                    <h3>HTML</h3>
-                    <p>Intermediate</p>
-                  </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="box d-flex animate2" style="--i: 2">
+                <img src="img/language/bootstrap.png" alt="html" />
+                <div class="box-content">
+                  <h3>Bootstrap</h3>
+                  <p>Intermediate</p>
+                </div>
+              </div>
+              <div class="box d-flex animate2" style="--i: 1">
+                <img src="img/language/Ellipse 8.png" alt="html" />
+                <div class="box-content">
+                  <h3>Java</h3>
+                  <p>Basic</p>
+                </div>
+              </div>
+              <div class="box d-flex animate2" style="--i: 0">
+                <img src="img/language/mysql.png" alt="html" />
+                <div class="box-content">
+                  <h3>Mysql</h3>
+                  <p>Basic</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </main>
+      <div class="wave wave3">
+        <img src="img/wave/wave3.svg" alt="" />
+      </div>
+      <section class="project" id="Project">
+        <div class="container">
+          <h3 class="project-head text-center fw-bold fs-third-heading animate">
+            Project
+          </h3>
+          <div class="grid">
+            <div class="card animate3" style="--trans: 1s">
+              <div class="card-thum">
+                <img src="img/projects/2.png" alt="" />
+              </div>
 
+              <h4 class="fw-medium fs-400">Java Application Futsal Cashier</h4>
+              <div class="language d-flex gap">
+                <img src="img/language/Ellipse 8.png" alt="" />
+                <img src="img/language/mysql-language.png" alt="" />
+              </div>
+              <p class="fs-300 fw-reguler">
+                java application Futsal Cashier merupakan Project memudahkan
+                staff untuk melalakukan transaksi pemabayaran lapangan futsal
+              </p>
+            </div>
+            <div class="card animate3" style="--trans: 1.25s">
+              <div class="card-thum">
+                <img src="img/projects/3.png" alt="" />
+              </div>
+
+              <h4 class="fw-medium fs-400">Aplikasi Manajemen Sekolah</h4>
+              <div class="language d-flex gap">
+                <img src="img/language/Ellipse 8.png" alt="" />
+                <img src="img/language/mysql-language.png" alt="" />
+              </div>
+              <p class="fs-300 fw-reguler">
+                Sistem manajemen guru untuk mempermudah kegiatan operasional,
+                manajemen sekolah dan juga kegiatan belajar mengajar.
+              </p>
+            </div>
+            <div class="card animate3" style="--trans: 1.5s">
+              <div class="card-thum">
+                <img src="img/projects/1.png" alt="" />
+              </div>
+
+              <h4 class="fw-medium fs-400">
+                Website Burger Payment Gateway Midtrans
+              </h4>
+              <div class="language d-flex gap">
+                <img src="img/language/html-icon.png" alt="" />
+                <img src="img/language/css-icon.png" alt="" />
+                <img src="img/language/javascript.png" alt="" />
+              </div>
+              <p class="fs-300 fw-reguler">
+                Website Burger Demo payment Gateway dengan Midtrans yang
+                terdapat 3 category menu yaitu Foods, Snack & Bevarage
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="footer">
+      <div class="footer-content">
+        <img src="img/logo 1.png" alt="" />
+        <div class="footer-nav">
+          <ul aria-label="primary" role="list" class="fnav-list">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Skill">Skill</a></li>
+            <li><a href="#Project">Project</a></li>
+          </ul>
+        </div>
+        <p class="text-center fw-reguler">
+          2023 © Anwar Hakim All Right Reserved
+        </p>
+      </div>
+    </div>
+
+    <div class="toTop">
+      <i class="ph ph-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

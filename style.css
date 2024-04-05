@@ -32,7 +32,14 @@
   --size-5: 5rem;
   --size-45: 4.5rem;
   --size-7: 7rem;
+
+  --behavior: smooth;
 }
+
+html {
+  scroll-behavior: var(--behavior);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -47,7 +54,6 @@ body {
   font-weight: var(--fw-medium);
   font-family: var(--ff-primary);
   background-color: var(--clr-primary-500);
-  min-height: 4000px;
 }
 p[data-width="wide"] {
   max-width: 32rem;
@@ -56,6 +62,7 @@ img,
 svg {
   display: block;
   max-width: 100%;
+  user-select: none;
 }
 
 /* button */
@@ -96,8 +103,8 @@ svg {
 }
 
 .nav-wrapper img {
-  width: clamp(2.5rem, 5vw, var(--size-5));
-  height: clamp(2.5rem, 5vw, var(--size-5));
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .primary-navigation {
@@ -317,6 +324,10 @@ svg {
   padding: var(--size-1-5);
 }
 
+.box:hover {
+  box-shadow: 0 0 var(--size-2) var(--clr-accent-400);
+}
+
 .box img {
   width: 75px;
   height: 75px;
@@ -341,6 +352,200 @@ svg {
   padding-top: 15px;
 }
 
+.skill-wrapper {
+  padding-bottom: 8.5rem;
+}
+
+/* project */
+
+.project {
+  margin-bottom: 6rem;
+}
+
+.project-head {
+  margin-bottom: 5.5rem;
+}
+
+.project .grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-7);
+  margin-bottom: var(--size-7);
+}
+
+.grid .card {
+  padding: var(--size-1-5);
+  background-color: var(--clr-primary-900);
+  width: 350px;
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 0 var(--size-2) var(--clr-accent-400);
+}
+
+.card .card-thum img {
+  width: 100%;
+}
+
+.card .language {
+  padding-block: 10px;
+}
+
+.card h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card p {
+  max-width: 18.25rem;
+}
+
+.card .language img {
+  width: 50px;
+  height: 50px;
+}
+
+.card:last-child .card-thum {
+  width: 292px;
+  height: 183px;
+}
+
+@media (max-width: 990px) {
+  .grid {
+    flex-wrap: wrap;
+  }
+}
+
+/* footer */
+
+.footer {
+  background-color: var(--clr-primary-900);
+  padding: 1rem;
+}
+
+.footer-content {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+.fnav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+  gap: 2rem;
+  margin-block: var(--size-2);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-500);
+}
+
+.fnav-list a {
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .fnav-list {
+    flex-direction: column;
+  }
+}
+
+/* toTop */
+
+.toTop {
+  position: fixed;
+  right: var(--size-1);
+  display: none;
+  bottom: var(--size-1);
+  padding: 0.5rem;
+  background-color: #fffefe;
+  color: var(--clr-primary-900);
+  cursor: pointer;
+  font-size: var(--size-1);
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-weight: var(--fw-bold);
+}
+
+/* scroll animation */
+
+section .animate,
+section .animate1,
+section .animate2 {
+  transition: 1s;
+  opacity: 0;
+  filter: blur(5px);
+}
+
+section.show-animate .animate,
+section.show-animate .animate1,
+section.show-animate .animate2 {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.about .animate {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+.about.show-animate .animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.skill .animate1 {
+  transform: translateX(900px);
+}
+
+.skill.show-animate .animate1 {
+  transform: translateX(0);
+}
+
+.skill .animate2 {
+  transform: translateX(-900px);
+}
+
+.skill.show-animate .animate2 {
+  transform: translateX(0);
+}
+
+.skill .animate {
+  opacity: 0;
+}
+
+.skill.show-animate .animate {
+  opacity: 1;
+}
+
+.animate {
+  transition-delay: calc(0.2s * var(--i));
+}
+
+.project {
+  overflow: hidden;
+}
+
+.project .animate3 {
+  transform: translateY(300px);
+}
+
+.animate3 {
+  transition: var(--trans);
+  opacity: 0;
+  filter: blur(5px);
+}
+
+.project.show-animate .animate3 {
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
 /* utitlity */
 .container {
   --max-width: 1280px;
@@ -355,6 +560,10 @@ svg {
   gap: 1.5rem;
   color: var(--clr-neutral-100);
   font-size: var(--fs-600);
+}
+
+section {
+  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -381,9 +590,19 @@ svg {
 .text-height {
   line-height: 2;
 }
+.gap {
+  gap: var(--size-1-5);
+}
+.wave {
+  transform: translateY(-1px);
+}
+.wave2 {
+  transform: translateY(2px);
+}
 
 .wave img {
   width: 100vw;
+  height: 100%;
 }
 
 .fw-reguler {
@@ -403,6 +622,10 @@ svg {
 
 .fs-400 {
   font-size: var(--fs-400);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
 }
 
 .fs-primary-heading {
